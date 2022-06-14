@@ -1,9 +1,10 @@
 ### Modding Guides
 
-- [Modding tutorials Overview](https://wiki.factorio.com/Tutorial:Modding_tutorial)
-- [gangsir beginner tutorial](https://wiki.factorio.com/Tutorial:Modding_tutorial/Gangsir)
-- [mod structure tutorial](https://wiki.factorio.com/Tutorial:Mod_structure)
-- [mod settings tutorial](https://wiki.factorio.com/Tutorial:Mod_settings)
+- [Tutorials Overview](https://wiki.factorio.com/Tutorial:Modding_tutorial)
+- [Modding (Gangsir)](https://wiki.factorio.com/Tutorial:Modding_tutorial/Gangsir)
+- [Mod Structure](https://wiki.factorio.com/Tutorial:Mod_structure)
+- [Mod Settings](https://wiki.factorio.com/Tutorial:Mod_settings)
+- [Setting up your Workspace](https://github.com/justarandomgeek/vscode-factoriomod-debug/blob/master/workspace.md)
 
 ### Lua Guides
 
