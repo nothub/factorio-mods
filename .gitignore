@@ -1,0 +1,7 @@
+/.idea/
+/.vscode/settings.json
+
+/out/
+/auth.cfg
+/cookiejar.txt
+/runtime-api.lua

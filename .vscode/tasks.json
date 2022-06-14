@@ -1,0 +1,57 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "cleanup",
+      "type": "shell",
+      "command": "find",
+      "args": [
+        "${input:mods-path}",
+        "-type", "f",
+        "-not", "-name", "debugadapter_*.zip",
+        "-not", "-name", "mod-list.json",
+        "-not", "-name", "mod-settings.dat",
+        "-delete"
+      ]
+    },
+    {
+      "label": "install",
+      "type": "shell",
+      "command": "./mods.sh",
+      "args": [
+        "install",
+        "${input:mod}",
+        "${input:mods-path}"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}"
+      }
+    },
+    {
+      "label": "clean-install",
+      "dependsOrder": "sequence",
+      "dependsOn": [
+        "cleanup",
+        "install"
+      ]
+    }
+  ],
+  "inputs": [
+    {
+      "id": "mods-path",
+      "type": "promptString",
+      "default": "/home/hub/factorio/mods",
+      "description": "mod install path"
+    },
+    {
+      "id": "mod",
+      "type": "pickString",
+      "options": [
+        "signals-galore",
+        "swearing-mudcrabs",
+        "vanilla-enhanced"
+      ],
+      "description": "mod project"
+    }
+  ]
+}

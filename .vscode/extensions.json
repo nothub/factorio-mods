@@ -1,0 +1,9 @@
+{
+  "recommendations": [
+    "sumneko.lua",
+    "svizzini.factorio-lua-api-autocomplete",
+    "justarandomgeek.factoriomod-debug",
+    "editorconfig.editorconfig",
+    "slevesque.vscode-zipexplorer"
+  ]
+}
