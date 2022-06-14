@@ -11,7 +11,8 @@
         "-not", "-name", "debugadapter_*.zip",
         "-not", "-name", "mod-list.json",
         "-not", "-name", "mod-settings.dat",
-        "-delete"
+        "-delete",
+        ";", "true"
       ]
     },
     {

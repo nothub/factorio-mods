@@ -65,6 +65,7 @@ command_install() {
   if [[ $# -ge 1 ]]; then user_data_mods="$(realpath "${1}")/mods/"; fi
   debug "User data mods path: ${user_data_mods}"
 
+  mkdir -p "${user_data_mods}"
   if ! cp "${out_dir}/${mod_archive}" "${user_data_mods}"; then
     panic "failed to install mod!"
   fi
