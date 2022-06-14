@@ -1,6 +1,6 @@
 {
   "name": "vanilla-enhanced",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "title": "Vanilla Enhanced",
   "author": "hub",
   "contact": "factorio@hub.lol",
@@ -39,9 +39,9 @@
     "MaxRateCalculator",
 
     "Bottleneck",
-    "damage-numbers",
     "FNEI",
     "informatron",
+    "show_my_damage",
     "StatsGui",
 
     "Todo-List",
