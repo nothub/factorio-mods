@@ -13,8 +13,8 @@ script.on_event(defines.events.on_entity_damaged,
             }
 
         -- player attacks an enemy unit (while in a car)
-        elseif target.type == "unit" and attacker.type == "car" and entity.last_user ~= nil then
-            entity.last_user.surface.play_sound {
+        elseif target.type == "unit" and attacker.type == "car" and attacker.last_user ~= nil then
+            attacker.last_user.surface.play_sound {
                 path = "player_attacks",
                 position = target.position
             }
