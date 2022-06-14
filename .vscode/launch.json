@@ -5,14 +5,14 @@
       "type": "factoriomod",
       "request": "launch",
       "name": "Factorio Mod Debug",
-      "factorioPath": "${input:factorio-path}/bin/x64/factorio",
+      "factorioPath": "${input:factorio-bin}",
       "preLaunchTask": "clean-install"
     },
     {
       "type": "factoriomod",
       "request": "launch",
       "name": "Factorio Mod Debug (Settings & Data)",
-      "factorioPath": "${input:factorio-path}/bin/x64/factorio",
+      "factorioPath": "${input:factorio-bin}",
       "hookSettings": true,
       "hookData": true,
       "preLaunchTask": "clean-install"
@@ -21,17 +21,17 @@
       "type": "factoriomod",
       "request": "launch",
       "name": "Factorio Mod Debug (Profile)",
-      "factorioPath": "${input:factorio-path}/bin/x64/factorio",
+      "factorioPath": "${input:factorio-bin}",
       "hookMode": "profile",
       "preLaunchTask": "clean-install"
     }
   ],
   "inputs": [
     {
-      "id": "factorio-path",
+      "id": "factorio-bin",
       "type": "promptString",
-      "default": "/home/hub/factorio",
-      "description": "game directory path"
+      "default": "/home/hub/factorio/bin/x64/factorio",
+      "description": "path to factorio binary"
     }
   ]
 }
