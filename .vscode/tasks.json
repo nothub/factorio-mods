@@ -6,7 +6,7 @@
       "type": "shell",
       "command": "find",
       "args": [
-        "${input:mods-path}",
+        "${input:user-data-path}",
         "-type", "f",
         "-not", "-name", "debugadapter_*.zip",
         "-not", "-name", "mod-list.json",
@@ -21,7 +21,7 @@
       "args": [
         "install",
         "${input:mod}",
-        "${input:mods-path}"
+        "${input:user-data-path}"
       ],
       "options": {
         "cwd": "${workspaceFolder}"
@@ -38,9 +38,9 @@
   ],
   "inputs": [
     {
-      "id": "mods-path",
+      "id": "user-data-path",
       "type": "promptString",
-      "default": "/home/hub/factorio/mods",
+      "default": "/home/hub/factorio",
       "description": "mod install path"
     },
     {

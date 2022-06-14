@@ -18,15 +18,20 @@ panic() {
 print_usage() {
   set +x
   script_name="$(basename "${BASH_SOURCE[0]}")"
-  log "Usage: ${script_name} [-v|-vv] [-h] [--] <command> <mod path> [<arg>...]
-  ${script_name} package <mod path>
-  ${script_name} install <mod path> [<client mods path>]
-  ${script_name} publish <mod path> [<api key>]
+  log "Usage: ${script_name} [-v | -vv] [-h] [--] <command> <mod-path> [<arg>...]
 
-  Options:
-    -v        Increase output verbosity
-    -h, -?    Print this help and exit
-  "
+Options:
+  -v        Increase output verbosity
+  -h, -?    Print this help and exit
+
+Commands:
+  ${script_name} package <mod-path>                     Package mod distribution archive.
+  ${script_name} install <mod-path> [<user-data-path>]  Install mod to local user data mods path.
+  ${script_name} publish <mod-path> [<api-key>]         Publish mod on official mod portal.
+
+The install and publish commands will automatically create a distribution archive.
+An api key is needed to publish mods; the key can be passed as argument or in the auth.cfg.
+"
 }
 
 check_dependency() {
@@ -37,7 +42,6 @@ check_dependency() {
 
 command_package() {
   debug "Packaging distribution archive."
-
   check_dependency zip
 
   mkdir -p "${out_dir}"
@@ -52,24 +56,26 @@ command_package() {
 }
 
 command_install() {
+  debug "Installing mod locally."
+
+  # create distribution archive if missing
   if [[ ! -f "${out_dir}/${mod_archive}" ]]; then command_package; fi
 
-  client_mods_dir="$HOME/.factorio/mods/"
-  if [[ $# -ge 1 ]]; then client_mods_dir="$1"; fi
+  user_data_mods="$HOME/.factorio/mods/"
+  if [[ $# -ge 1 ]]; then user_data_mods="$(realpath "${1}")/mods/"; fi
+  debug "User data mods path: ${user_data_mods}"
 
-  debug "Installing mod to: ${client_mods_dir}"
-
-  if ! cp "${out_dir}/${mod_archive}" "${client_mods_dir}"; then
+  if ! cp "${out_dir}/${mod_archive}" "${user_data_mods}"; then
     panic "failed to install mod!"
   fi
 }
 
 command_publish() {
+  debug "Publishing distribution archive."
   check_dependency curl
 
+  # create distribution archive if missing
   if [[ ! -f "${out_dir}/${mod_archive}" ]]; then command_package; fi
-
-  debug "Publishing distribution archive."
 
   # read key from args
   if [[ $# -ge 1 ]]; then
@@ -120,6 +126,9 @@ EOF
 
 # ENTRY POINT
 
+# cd to script directory / repository root
+cd "$(dirname "$(readlink -f -- "$0")")"
+
 # read options
 debug=0
 while getopts vh? opt; do
@@ -136,20 +145,16 @@ while getopts vh? opt; do
 done
 shift $((OPTIND - 1))
 
-# cd to script directory / repository root
-cd "$(dirname "$(readlink -f -- "$0")")"
-out_dir=$(realpath "out")
-
-# require at least 2 arguments
+# read 2 required arguments
 if [[ $# -lt 2 ]]; then
   print_usage
   exit
 fi
-
-# read required arguments
 command=$1
 mod_path=$(realpath "$2")
 shift 2
+
+debug "Working Directory: $(pwd)"
 
 if [[ ! -f ${mod_path}/info.json ]]; then panic "Missing mod info.json: ${mod_path}/info.json"; fi
 
@@ -159,12 +164,14 @@ mod_name=$(jq --raw-output '.name' <"${mod_path}/info.json")
 mod_version=$(jq --raw-output '.version' <"${mod_path}/info.json")
 mod_archive=${mod_name}_${mod_version}.zip
 
-log "${mod_name}" "v${mod_version}"
+log "${mod_name}" "${mod_version}"
 debug "$(jq <"${mod_path}/info.json")"
 
 if ! echo "${mod_version}" | grep --extended-regexp --quiet '^[0-9]+\.[0-9]+\.[0-9]+$'; then
   panic "Invalid version pattern: ${mod_version}"
 fi
+
+out_dir=$(realpath "out")
 
 case $command in
 package)
