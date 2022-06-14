@@ -1,6 +1,6 @@
 {
   "name": "vanilla-enhanced",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "title": "Vanilla Enhanced",
   "author": "hub",
   "contact": "factorio@hub.lol",
@@ -17,6 +17,7 @@
 
     "aai-signals",
     "aai-signal-transmission",
+    "pushbutton",
 
     "aai-vehicles-chaingunner",
     "aai-vehicles-flame-tank",
