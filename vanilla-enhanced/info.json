@@ -1,0 +1,68 @@
+{
+  "name": "vanilla-enhanced",
+  "version": "0.0.3",
+  "title": "Vanilla Enhanced",
+  "author": "hub",
+  "contact": "factorio@hub.lol",
+  "description": "A collection of assorted enhancements. This mod does nothing by itself but establishes dependencies to other mods.",
+  "factorio_version": "1.1",
+  "dependencies": [
+    "base >= 1.1",
+
+    "signals-galore",
+    "swearing-mudcrabs",
+
+    "alien-biomes",
+    "alien-biomes-hr-terrain",
+
+    "aai-signals",
+    "aai-signal-transmission",
+
+    "aai-vehicles-chaingunner",
+    "aai-vehicles-flame-tank",
+    "aai-vehicles-flame-tumbler",
+    "aai-vehicles-ironclad",
+    "aai-vehicles-laser-tank",
+
+    "spidertrontiers-circulardependency",
+    "spidertron-deal-with-it",
+
+    "grappling-gun",
+    "Nanobots",
+    "qol_research",
+    "Squeak Through",
+    "Teleporters",
+    "VehicleSnap",
+
+    "factoryplanner",
+    "MaxRateCalculator",
+
+    "Bottleneck",
+    "damage-numbers",
+    "FNEI",
+    "informatron",
+    "StatsGui",
+
+    "Todo-List",
+    "textplates",
+
+    "AfraidOfTheDark",
+    "CleanFloor",
+    "DiscoScience",
+
+    "CopyPasteModules",
+    "even-distribution",
+    "Fill4Me",
+
+    "AutoDeconstruct",
+    "Auto-destruct-trees-on-resources",
+
+    "minime",
+    "CharacterModHelper",
+    "AmongUsCharacter",
+    "GirlCharacter",
+    "IRobot",
+    "pikachu",
+    "shrek2"
+  ]
+}

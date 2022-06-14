@@ -1,0 +1,10 @@
+{
+  "name": "swearing-mudcrabs",
+  "version": "1.0.1",
+  "title": "Swearing Mudcrabs",
+  "author": "hub",
+  "contact": "factorio@hub.lol",
+  "description": "Hey, you. You're finally awake. Credits to: nexusmods.com/skyrimspecialedition/mods/1951/",
+  "factorio_version": "1.1",
+  "dependencies": [ "base >= 1.1" ]
+}

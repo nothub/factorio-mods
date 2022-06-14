@@ -1,0 +1,19 @@
+---------------------------------------------------------------------------------------------------
+Version: 1.0.1
+Date: 2022.06.14
+  Info:
+    - Add doge signal.
+---------------------------------------------------------------------------------------------------
+Version: 1.0.0
+Date: 2022.06.13
+  Info:
+    - Add some greek letters.
+    - Add some unicode emoji based signals.
+    - Use one subgroup per category.
+    - English translations.
+---------------------------------------------------------------------------------------------------
+Version: 0.0.0
+Date: 2022.06.11
+  Info:
+    - Project initialized.
+    - Add memes.

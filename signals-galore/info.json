@@ -1,0 +1,10 @@
+{
+  "name": "signals-galore",
+  "version": "1.0.1",
+  "title": "Signals Galore",
+  "author": "hub",
+  "contact": "factorio@hub.lol",
+  "description": "A bunch of virtual signals.",
+  "factorio_version": "1.1",
+  "dependencies": [ "base >= 1.1" ]
+}

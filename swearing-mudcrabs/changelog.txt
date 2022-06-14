@@ -1,0 +1,10 @@
+---------------------------------------------------------------------------------------------------
+Version: 1.0.1
+Date: 2022.06.14
+  Info:
+    - Use SSE mod version in credits (original is not visible for guests on nexusmods.com).
+---------------------------------------------------------------------------------------------------
+Version: 1.0.0
+Date: 2022.06.14
+  Info:
+    - Project initialized.
