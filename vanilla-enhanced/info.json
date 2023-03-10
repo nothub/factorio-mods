@@ -1,6 +1,6 @@
 {
   "name": "vanilla-enhanced",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "title": "Vanilla Enhanced Modpack",
   "author": "hub",
   "contact": "factorio@hub.lol",
@@ -9,14 +9,12 @@
   "dependencies": [
     "base >= 1.1",
 
-    "signals-galore",
-    "swearing-mudcrabs",
-
     "alien-biomes",
     "alien-biomes-hr-terrain",
 
     "aai-signals",
     "aai-signal-transmission",
+    "signals-galore",
     "pushbutton",
 
     "aai-vehicles-chaingunner",
