@@ -1,8 +1,8 @@
 {
   "name": "vanilla-enhanced",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "title": "Vanilla Enhanced",
-  "author": "hub",
+  "author": [ "hub" ],
   "contact": "factorio@hub.lol",
   "description": "A collection of assorted enhancements. This mod does nothing by itself but establishes dependencies to other mods.",
   "factorio_version": "1.1",
