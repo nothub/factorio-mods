@@ -37,17 +37,15 @@
     "Waterfill_Shallow",
 
     "helmod",
-    "MaxRateCalculator",
+    "RateCalculator",
 
-    "Bottleneck",
+    "BottleneckLite",
     "FNEI",
     "informatron",
     "show-max-underground-distance",
     "show_my_damage",
     "StatsGui",
-
-    "Todo-List",
-    "textplates",
+    "TaskList",
 
     "AfraidOfTheDark",
     "bullet-trails",
@@ -56,7 +54,7 @@
     "textplates",
 
     "CopyPasteModules",
-    "even-distribution",
+    "EvenDistributionLite",
     "Fill4Me",
 
     "AutoDeconstruct",
