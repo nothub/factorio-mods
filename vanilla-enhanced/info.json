@@ -59,6 +59,10 @@
     "AutoDeconstruct",
     "Auto-destruct-trees-on-resources",
 
+    "Automatic_Train_Painter",
+    "automatic-station-painter",
+    "FluidWagonColorMask",
+
     "minime",
     "CharacterModHelper",
     "AmongUsCharacter",
