@@ -1,4 +1,13 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.0.0
+Date: 2023.03.10
+  Info:
+    - switch SpidertronTiers to psznm fork (community updates)
+    - shallow only waterfill actually sounds balanced
+    - helmod (replaces factoryplanner)
+    - add some eyecandy (colored trains, textplates, bullettrails)
+    - replace some mods with alternatives by raiguard
+---------------------------------------------------------------------------------------------------
 Version: 0.0.5
 Date: 2022.06.14
   Info:
