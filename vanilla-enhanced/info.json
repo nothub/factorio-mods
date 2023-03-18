@@ -1,6 +1,6 @@
 {
   "name": "vanilla-enhanced",
-  "version": "1.0.2",
+  "version": "2.0.0",
   "title": "Vanilla Enhanced Modpack",
   "author": "hub",
   "contact": "factorio@hub.lol",
@@ -28,7 +28,7 @@
 
     "grappling-gun",
     "Nanobots",
-    "qol_research",
+    "RPGsystem",
     "Squeak Through",
     "Teleporters",
     "VehicleSnap",
@@ -38,8 +38,8 @@
     "RateCalculator",
 
     "BottleneckLite",
-    "FNEI",
     "informatron",
+    "RecipeBook",
     "show-max-underground-distance",
     "show_my_damage",
     "StatsGui",
@@ -50,6 +50,7 @@
     "CleanFloor",
     "DiscoScience",
     "textplates",
+    "shrek2",
 
     "CopyPasteModules",
     "EvenDistributionLite",
@@ -58,16 +59,9 @@
     "AutoDeconstruct",
     "Auto-destruct-trees-on-resources",
 
+    "LogisticTrainNetwork",
     "Automatic_Train_Painter",
     "automatic-station-painter",
-    "FluidWagonColorMask",
-
-    "minime",
-    "CharacterModHelper",
-    "AmongUsCharacter",
-    "GirlCharacter",
-    "IRobot",
-    "pikachu",
-    "shrek2"
+    "FluidWagonColorMask"
   ]
 }

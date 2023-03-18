@@ -1,4 +1,12 @@
 ---------------------------------------------------------------------------------------------------
+Version: 2.0.0
+Date: 2023.03.18
+  Info:
+    - Add LTN (Logistic Train Network).
+    - Remove miniMAXIme and most player skins.
+    - Replace QoL research with RPG system.
+    - Replace FNEI with RecipeBook.
+---------------------------------------------------------------------------------------------------
 Version: 1.0.2
 Date: 2023.03.10
   Info:
