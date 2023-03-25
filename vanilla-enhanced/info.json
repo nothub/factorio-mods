@@ -1,6 +1,6 @@
 {
   "name": "vanilla-enhanced",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "title": "Vanilla Enhanced Modpack",
   "author": "hub",
   "contact": "factorio@hub.lol",
@@ -8,9 +8,6 @@
   "factorio_version": "1.1",
   "dependencies": [
     "base >= 1.1",
-
-    "alien-biomes",
-    "alien-biomes-hr-terrain",
 
     "aai-signals",
     "aai-signal-transmission",
