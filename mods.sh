@@ -26,10 +26,9 @@ Options:
 
 Commands:
   ${script_name} package <mod-path>                     Package mod distribution archive.
-  ${script_name} install <mod-path> [<user-data-path>]  Install mod to local user data mods path.
   ${script_name} publish <mod-path> [<api-key>]         Publish mod on official mod portal.
 
-The install and publish commands will automatically create a distribution archive.
+The publish command will automatically create a distribution archive.
 An api key is needed to publish mods; the key can be passed as argument or in the auth.cfg.
 "
 }
@@ -53,22 +52,6 @@ command_package() {
     panic "Failed to create distribution archive!"
   fi
   debug "Distribution archive ready:" "${out_dir}/${mod_archive}"
-}
-
-command_install() {
-  debug "Installing mod locally."
-
-  # create distribution archive if missing
-  if [[ ! -f "${out_dir}/${mod_archive}" ]]; then command_package; fi
-
-  user_data_mods="$HOME/.factorio/mods/"
-  if [[ $# -ge 1 ]]; then user_data_mods="$(realpath "${1}")/mods/"; fi
-  debug "User data mods path: ${user_data_mods}"
-
-  mkdir -p "${user_data_mods}"
-  if ! cp "${out_dir}/${mod_archive}" "${user_data_mods}"; then
-    panic "failed to install mod!"
-  fi
 }
 
 command_publish() {
@@ -177,10 +160,6 @@ out_dir=$(realpath "out")
 case $command in
 package)
   command_package
-  exit
-  ;;
-install)
-  command_install "$@"
   exit
   ;;
 publish)
