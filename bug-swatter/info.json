@@ -4,7 +4,7 @@
   "title": "Bug Swatter",
   "author": "hub",
   "contact": "factorio@hub.lol",
-  "description": "Late-game mechanisms to disable and enable biters.",
+  "description": "Late-game mechanism to disable biters.",
   "factorio_version": "1.1",
   "dependencies": [ "base >= 1.1" ]
 }
